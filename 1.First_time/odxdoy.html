@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Zgadniaj jaka liczba</title>
+        <meta charset="utf-8">
+        <script>
+            document.write("Wiatj<br>"
+            +"Jesteś w programie gdzie musisz zgadnąć wylosoweaną lidżbę<br>"+
+            "Lidżba jest z przedziału od 1 do 100 --> <1;100><br>"+
+            "Masz na to pięć szans<br>"+
+            "Wciśnij start aby rozpocząć<br>"
+            );
+
+            function start() {
+                //wylosowana wartość
+                var x = Math.floor(Math.random()*100)+1;
+                //ilość szans
+                var changes = 5;
+                
+                while(changes > 0) {
+                    let y = prompt("podaj wartość od 1 do 100, masz "+ changes+ " szans","");
+                   if(y == x) {
+                        alert("Wygrałeś");
+                        return;
+                   }
+                   else if(y > x)
+                        alert("szukana wartość jest mniejsza");
+                   else if(y < x)
+                        alert("szukana wartość jest większa");
+                    
+                    changes--;
+                
+                }
+                alert("niestety nie udało ci się, Szukana wartość to: "+x);
+                return;     
+            }
+
+        </script>
+    </head>
+    <body>
+        <button type="button" onclick="start()">START</button>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+button {
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: darkblue;
+    width: 10%;
+    height: 10%;
+    text-align: center;
+    border-radius: 10px;
+    margin: 1px;
+}
+
+.buttons {
+    background-color: rgb(50, 23, 40);
+    text-align: center;
+    padding: 5px;
+}

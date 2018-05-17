@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>Przelicznik temperatur</title>
+        <meta charset="utf-8">
+        <script>
+            /*var iframe = document.createElement("iframe");
+            iframe.name = "myTarget";
+
+            window.addEventListener("load",function() {
+                iframe.style.display = "none";
+                document.body.appendChild(iframe);
+            })
+
+            function sendData(data,x,y) {
+                let wynik = 0;
+                if(x == "Calsjusz") {
+                    if(y == "Kelvin")
+                        wynik = 273.15 + data;
+                    else if(y == "Farenheit")
+                        wynik = 32 + (9/5) * data;
+                    else wynik = data;
+                }
+                else if(x == "Kelvin") {
+                    console.log("wawa");
+                    if(y == "Farenheit")
+                        wynik = (9/5) * (data - 273.15) + 32;
+                    else if(y == "Calsjusz")
+                        wynik = data - 273.15;
+                    else wynik = data;
+                }
+                else { //farenheit
+                    if(y == "Kelvin")
+                        wynik = (5/9) * (data - 32) + 273.15;
+                    else if(y == "Celsjusz")
+                        wynik = (5/9) * (data - 32);
+                    else wynik = data;
+                }
+
+                var name,
+                form = document.createElement("form"),
+                node = document.createElement("input");
+
+            // Define what happens when the response loads
+            iframe.addEventListener("load", function () {
+                alert(wynik);
+            });
+                
+            form.action = "http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi";
+            form.target = iframe.name;
+
+            for(name in data) {
+                node.name  = name;
+                node.value = data[name].toString();
+                form.appendChild(node.cloneNode());
+            }
+
+            // To be sent, the form needs to be attached to the main document.
+            form.style.display = "none";
+            document.body.appendChild(form);
+
+            form.submit();
+
+            // Once the form is sent, remove it.
+            document.body.removeChild(form);
+        }*/
+            function sendData(data, x, y) {
+                let wynik = 0;
+                console.log(x);
+                console.log(y);
+                console.log(data);
+                if(x == "Calsjusz") {
+                    if(y == "Kelvin")
+                        wynik = 273.15 + data;
+                    else if(y == "Farenheit")
+                        wynik = 32 + (9/5) * data;
+                    else wynik = data;
+                }
+                else if(x == "Kelvin") {
+                    console.log("wawa");
+                    if(y == "Farenheit")
+                        wynik = (9/5) * (data - 273.15) + 32;
+                    else if(y == "Calsjusz")
+                        wynik = data - 273.15;
+                    else wynik = data;
+                }
+                else { //farenheit
+                    if(y == "Kelvin")
+                        wynik = (5/9) * (data - 32) + 273.15;
+                    else if(y == "Celsjusz")
+                        wynik = (5/9) * (data - 32);
+                    else wynik = data;
+                }
+
+                document.write("Z  " + data + " " + x + " na : " + 
+                y + " jest równa " + wynik);
+                return wynik;
+            }
+        </script>
+    </head>
+    <body>
+        <h3>WItaj możemy obliczyć dla ciebie wartość dla wybranych temperatur</h3>
+        <form name="form">
+                <label for="firstTem">Z temperatury</label>
+                <select name="firstTem" value="none">
+                        <option>Kelvin</option>
+                        <option>Celsjusz</option>
+                        <option>Farenheit</option>
+                </select>
+                <label for="secondTem">na temperature </label>
+                <select name="secondTem" value="none">
+                        <option>Kelvin</option>
+                        <option>Celsjusz</option>
+                        <option>Farenheit</option>
+                </select> <br>
+                <label for="value">Podaj temperature: </label>
+                <input tpye="tekst" name="value" value="0">
+            <input type="button" value = "Przelicz" onclick="sendData(this.form.value.value, this.form.firstTem.value, this.form.secondTem.value)">
+        </form>
+    </body>
+</html>

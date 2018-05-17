@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Podstawy JS</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            //zmienna / variable - bezproblemowa zmiana wartości
+            var x = 1; //deklaracja
+            document.write(x);
+            x+=2; //x = x + 2
+            document.write(x);
+
+            //pobieranie danych
+            var y = prompt("Podasz mi imie","tekst opcjonalny");
+            //wypisywanie danych
+            document.write(y);
+
+            //Jeżeli warunek jest prawdziwy (np. 1 < 2 lub true)
+            if(warunek) {
+                //instrukcja
+            }
+            else { //w przeciwnym wypadku (np. 1 > 2 lub false)
+                //instrukcja 
+            }
+
+            //pętla for(początkowa; warunek wykonania; inkrementacja / dekrementacja)
+            for(var i = 0; i < 3; i++) { //pętla roznąca
+                document.write(i);       //takie wartości przyjmie i : 0 1 2
+            }
+            for(i = 4; i>=0; i--) { //pętla malejąca
+                document.write(i);  //takie wartości przyjmie i : 4 3 2 1 0
+            }
+
+            //to blok kodu stworzony do wykonywania określonego zadania 
+            function nazwa(argumenty) {
+                //instrukcja
+            }
+            //użycie funkcji w programie
+            nazwa(argument);
+
+            //tablica to zespół zmiennych w jednym miejscu gdzie są one poindeksowane
+            var tab = []; //pusta tablica
+            var tab2 = [1, 2, 3, 4]; //tablica z 4 liczbami
+            const tab = ["ala", "ma", "kota"];
+            //Numerowanie w tablicach jest od 0 do n-1
+            document.write( tab[0] ); //ala
+            document.write( tab[1] ); //ma
+            document.write( tab[2] ); //kota
+
+        </script>
+    </body>
+</html>
