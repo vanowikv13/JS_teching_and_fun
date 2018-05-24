@@ -1,16 +1,51 @@
 button {
-    color: red;
+    color: rgb(71, 8, 8);
     font-family: Arial, Helvetica, sans-serif;
-    background-color: darkblue;
+    background-color: rgb(172, 124, 218);
     width: 10%;
     height: 10%;
     text-align: center;
     border-radius: 10px;
     margin: 1px;
+    width: 10%;
+    height: 10%;
+    font-weight: bold;
+    font-size: 150%;
+    border: solid rgb(180, 39, 124) 3px;
 }
 
 .buttons {
-    background-color: rgb(50, 23, 40);
+    background-color: rgb(102, 16, 71);
     text-align: center;
     padding: 5px;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0px;
+}
+
+body {
+    background-color: blueviolet;
+}
+
+#pole {
+    background-color: white;
+    padding: 5px;
+    font-size: 130%;
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid rgb(180, 39, 124) 3px;
+}
+
+#header {
+    padding: 10px;
+    background-color: rgb(102, 16, 71);
+    margin: 0px;
+    color: white;
+    font-size: 130%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+#sqrt {
+    font-size: 150%;
+    font-weight: 200;
 }
